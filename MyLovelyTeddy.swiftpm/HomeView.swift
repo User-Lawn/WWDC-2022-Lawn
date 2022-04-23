@@ -17,18 +17,22 @@ struct HomeView: View {
             
             VStack(spacing: 10){
                        
-                Image("TeddyBear")
+                Image("Teddy")
         
            
             VStack(spacing: 50){
-           
-                Text("Please click me \nAnd tell me your story")
-                               .font(.title2)
-                               .fontWeight(.bold)
-                               .foregroundColor(Color(red: 0.423, green: 0.448, blue: 0.439))
-                               .multilineTextAlignment(.center)
-           
-                Image("Teddy's Story")
+                ZStack{
+                    Image("RectangleHeart")
+                    
+                    Text("HI, I’m Teddy With your Friends\nI'm the best listenner in the world \nIf you're curious, read my story")
+                                   .font(.title2)
+                                   .fontWeight(.bold)
+                                   .foregroundColor(Color(red: 0.423, green: 0.448, blue: 0.439))
+                                   .multilineTextAlignment(.center)
+               
+                   
+                }
+             
                 
                 }
             }

@@ -58,7 +58,7 @@ struct MemoriesView : View {
                         
                         // same file name...
                         // so were updating based on audio count...
-                        let filName = url.appendingPathComponent("myRcd\(self.audios.count + 1).m4a")
+                        let filName = url.appendingPathComponent("Memorie\(self.audios.count + 1).m4a")
                         
                         let settings = [
                         
@@ -83,15 +83,12 @@ struct MemoriesView : View {
                     
                     ZStack{
                         
-                        Circle()
-                            .fill(Color.red)
-                            .frame(width: 70, height: 70)
+                        Image("TeddyMike2")
                         
                         if self.record{
                             
-                            Circle()
-                                .stroke(Color.white, lineWidth: 6)
-                                .frame(width: 85, height: 85)
+                        Image("TeddyMike")
+                            
                         }
                     }
                 }

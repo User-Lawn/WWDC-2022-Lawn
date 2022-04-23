@@ -11,12 +11,12 @@ struct ContentView: View {
                     Label("Hi Teddy", systemImage: "house.fill")
                 }
 
-            MemoriesView()
+            TeddyStory()
                 .tabItem {
                     Label("Teddy's Storys", systemImage: "book")
                 }
             
-            TeddyStory()
+            MemoriesView()
                 .tabItem {
                     Label("Memories", systemImage: "waveform")
                 }
