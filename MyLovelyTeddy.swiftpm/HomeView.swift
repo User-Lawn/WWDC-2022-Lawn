@@ -9,35 +9,51 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    @State private var randomComments = ""
+    
     var body: some View {
        
         ZStack{
             
             BackgroundView()
             
-            VStack(spacing: 10){
-              
+            VStack {
                 
-                Image("Teddy")
-        
-           
-            VStack(spacing: 50){
-                ZStack{
-                    Image("RectangleHeart")
                     
-                    Text("Text")
-                                   .font(.title2)
-                                   .fontWeight(.bold)
-                                   .foregroundColor(Color(red: 0.423, green: 0.448, blue: 0.439))
-                                   .multilineTextAlignment(.center)
-               
+                Image("Teddy")
                    
+                    
+               
+    
+                VStack(){
+                    
+                    ZStack{
+                        
+                        Button(action: {randomComments = information.randomComments.randomElement()!}) {
+                            
+                                      Image("Click")
+                                      
+                                  }
+                    
+                    }
+                    ZStack{
+                        
+                        Image("RandomComments")
+                        
+                        Text(randomComments)
+                            .padding()
+                            .font(.title)
+                            .frame(minHeight: 100)
+                       
+                    }
+                   
+                    
                 }
-             
-                
-                }
+               
             }
+            }
+            
         }
     }
-}
 
+ 
