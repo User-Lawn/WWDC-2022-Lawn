@@ -11,7 +11,7 @@ struct ContentView: View {
                     Label("Hi Teddy", systemImage: "house.fill")
                 }
 
-            TeddyStory()
+            StoryView()
                 .tabItem {
                     Label("Teddy's Storys", systemImage: "book")
                 }

@@ -16,7 +16,8 @@ struct HomeView: View {
             BackgroundView()
             
             VStack(spacing: 10){
-                       
+              
+                
                 Image("Teddy")
         
            
@@ -24,7 +25,7 @@ struct HomeView: View {
                 ZStack{
                     Image("RectangleHeart")
                     
-                    Text("HI, I’m Teddy With your Friends\nI'm the best listenner in the world \nIf you're curious, read my story")
+                    Text("Text")
                                    .font(.title2)
                                    .fontWeight(.bold)
                                    .foregroundColor(Color(red: 0.423, green: 0.448, blue: 0.439))

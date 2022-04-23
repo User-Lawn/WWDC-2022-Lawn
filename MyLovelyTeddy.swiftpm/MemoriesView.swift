@@ -21,7 +21,7 @@ struct MemoriesView : View {
     
     var body: some View{
         
-        NavigationView{
+//        NavigationView {
             
             VStack{
                 
@@ -95,7 +95,7 @@ struct MemoriesView : View {
                 .padding(.vertical, 25)
             }
             .navigationBarTitle("Record Audio")
-        }
+//        }
         .alert(isPresented: self.$alert, content: {
             
             Alert(title: Text("Error"), message: Text("Enable Acess"))
