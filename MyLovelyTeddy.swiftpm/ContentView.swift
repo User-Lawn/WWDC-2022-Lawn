@@ -1,27 +1,27 @@
+
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView{
+        
+        TabView {
             
-            VStack{
-                NavigationLink {
-                    MemoriesWithTeddy()
-                        .navigationTitle("Memories With Teddy")
-                } label: {
-                    Text(" Memories With Teddy")
+            HomeView()
+                .tabItem {
+                    Label("Hi Teddy", systemImage: "house.fill")
                 }
-               
-                NavigationLink {
-                    TeddyStory()
-                        .navigationTitle("Teddy Story")
-                } label: {
-                    Text("Teddy Story")
+
+            MemoriesView()
+                .tabItem {
+                    Label("Teddy's Storys", systemImage: "book")
                 }
-                
-            }
-            .navigationTitle("My Teddy")
-            .navigationBarTitleDisplayMode(.inline)
+            
+            TeddyStory()
+                .tabItem {
+                    Label("Memories", systemImage: "waveform")
+                }
+       
         }
     }
 }
+

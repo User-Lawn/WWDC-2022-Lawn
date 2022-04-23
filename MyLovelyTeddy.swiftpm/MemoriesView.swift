@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import AVKit
 
-struct MemoriesWithTeddy : View {
+struct MemoriesView : View {
     
     @State var record = false
     // creating instance for recroding...
