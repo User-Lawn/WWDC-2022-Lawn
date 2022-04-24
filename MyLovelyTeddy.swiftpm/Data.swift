@@ -9,11 +9,13 @@ import Foundation
 import SwiftUI
 struct Info {
    
+    let icon: [String]
     let randomComments: [String]
 }
 
 let information = Info(
-   
+    
+    icon: ["🥐", "🌮", "🍣"],
     randomComments: [
         "Today's special moments are tomorrow's memories\n- Yonsei Univ",
         

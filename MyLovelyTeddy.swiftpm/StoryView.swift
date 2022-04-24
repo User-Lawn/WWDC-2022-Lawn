@@ -20,7 +20,7 @@ struct StoryView: View {
         
         VStack(spacing: 15){
             
-            // Snap Carousel....
+           
             SnapCarousel(index: $currentIndex, items: posts) {post in
                 
                 GeometryReader{proxy in
@@ -36,7 +36,7 @@ struct StoryView: View {
             }
             .padding(.vertical,40)
             
-            // Indicator...
+           
             HStack(spacing: 10){
                 
                 ForEach(posts.indices,id: \.self){index in

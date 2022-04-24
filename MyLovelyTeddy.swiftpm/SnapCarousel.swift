@@ -54,43 +54,33 @@ struct SnapCarousel<Content: View,T: Identifiable>: View {
                     })
                     .onEnded({ value in
                         
-                        // Updating Current Index....
+                      
                         let offsetX = value.translation.width
                         
-                        // were going to convert the tranlsation into progress (0 - 1)
-                        // and round the value...
-                        // based on the progress increasing or decreasing the currentIndex...
                         
                         let progress = -offsetX / width
                         
                         let roundIndex = progress.rounded()
                         
-                        // setting min...
                         currentIndex = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
                         
-                        // updating index....
                         currentIndex = index
                     })
                     .onChanged({ value in
-                        // updating only index....
-                        
-                        // Updating Current Index....
+        
                         let offsetX = value.translation.width
                         
-                        // were going to convert the tranlsation into progress (0 - 1)
-                        // and round the value...
-                        // based on the progress increasing or decreasing the currentIndex...
                         
                         let progress = -offsetX / width
                         
                         let roundIndex = progress.rounded()
                         
-                        // setting min...
+
                         index = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
                     })
             )
         }
-        // Animatiing when offset = 0
+      
         .animation(.easeInOut, value: offset == 0)
     }
 }

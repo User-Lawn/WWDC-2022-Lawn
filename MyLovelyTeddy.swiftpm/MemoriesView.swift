@@ -16,15 +16,14 @@ struct MemoriesView : View {
     @State var recorder : AVAudioRecorder!
     @State var alert = false
     @State var audios : [URL] = []
+   
     
     var body: some View{
-
-            
+       
             VStack{
                 
                 List(self.audios,id: \.self){i in
                     
-                    // printing only file name...
                     
                     Text(i.relativeString)
                 }
@@ -72,6 +71,7 @@ struct MemoriesView : View {
                     ZStack{
                         
                         Image("TeddyMike2")
+                           
                         
                         if self.record{
                             
@@ -82,9 +82,8 @@ struct MemoriesView : View {
                 }
                 .padding(.vertical, 25)
             }
-            .navigationBarTitle("Record Audio")
-//        }
-        .alert(isPresented: self.$alert, content: {
+    
+            .alert(isPresented: self.$alert, content: {
             
             Alert(title: Text("Error"), message: Text("Enable Acess"))
         })
