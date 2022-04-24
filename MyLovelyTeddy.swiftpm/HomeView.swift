@@ -18,42 +18,42 @@ struct HomeView: View {
             BackgroundView()
             
             VStack {
-                
                     
                 Image("Teddy")
-                   
-                    
-               
     
-                VStack(){
+            VStack(){
                     
-                    ZStack{
+                ZStack{
                         
-                        Button(action: {randomComments = information.randomComments.randomElement()!}) {
+                    Button(action: {randomComments = information.randomComments.randomElement()!}) {
                             
-                                      Image("Click")
+                    Image("Click")
                                       
-                                  }
+                        }
                     
                     }
-                    ZStack{
+                ZStack{
                         
-                        Image("RandomComments")
+                    Image("RandomComments")
                         
-                        Text(randomComments)
-                            .padding()
-                            .font(.title)
-                            .frame(minHeight: 100)
+                    Text(randomComments)
+                        .foregroundColor(Color(red: 0.514, green: 0.514, blue: 0.514))
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        .font(.title)
+                        .frame(width: 600, height: 200)
+                    
                        
                     }
                    
-                    
                 }
                
-            }
-            }
+             }
             
         }
+        
     }
+    
+}
 
  

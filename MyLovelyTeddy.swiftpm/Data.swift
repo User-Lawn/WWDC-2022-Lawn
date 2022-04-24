@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-//데이터의 유형을 정의하는 속성이 포함됩니다.
 struct Info {
    
     let randomComments: [String]
@@ -16,13 +15,19 @@ struct Info {
 let information = Info(
    
     randomComments: [
-        "The femur is the longest and largest bone in the human body.",
-        "The moon is 238,900 miles away.",
-        "Prince’s last name was Nelson.",
-        "503 new species were discovered in 2020.",
-        "Ice is 9 percent less dense than liquid water.",
-        "You can spell every number up to 1,000 without using the letter A.\n\n...one, two, three, four...ninety-nine...nine hundred ninety-nine 🧐",
-        "A collection of hippos is called a bloat.",
-        "White sand beaches are made of parrotfish poop.",
+        "The beautiful thing about memories is that they are yours;\nwhether they are good, bad, or indifferent.\nThey belong to you, and no matter where you are now.\n- Unknown",
+        
+        "Photos capture our memories in print,\nbut our memories are always with us in our minds.\n- Catherine Pulsifer",
+        
+        "The memory of happiness tends to make misery woeful.\n- Roman Proverb",
+        
+        "Memories can be sad, but sometimes they can also save you. - Takayuki Ikkaku",
+        
+        "Our memories are the only paradise from which we can never be expelled.\n- Jean Paul Richter",
+        
+        "Memories were the markers of the journey through life.\nIt was necessary to know where you had come from.\nOnly then could you know where you were going.\n - William Shatner",
+
+        "Memories, even your most precious ones, fade surprisingly quickly.\nBut I don't go along with that.\nThe memories I value most, I don't ever see them fading.\n- Kazuo Ishiguro",
+        
     ]
 )

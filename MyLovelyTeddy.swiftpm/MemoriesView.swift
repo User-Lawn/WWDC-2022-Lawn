@@ -12,16 +12,13 @@ import AVKit
 struct MemoriesView : View {
     
     @State var record = false
-    // creating instance for recroding...
     @State var session : AVAudioSession!
     @State var recorder : AVAudioRecorder!
     @State var alert = false
-    // Fetch Audios...
     @State var audios : [URL] = []
     
     var body: some View{
-        
-//        NavigationView {
+
             
             VStack{
                 
@@ -35,29 +32,20 @@ struct MemoriesView : View {
                 
                 Button(action: {
 
-                    // Now going to record audio...
-                    
-                    // Intialization...
-                    
-                    // Were going to store audio in document directory...
                     
                     do{
                         
                         if self.record{
-                            
-                            // Already Started Recording means stopping and saving...
+                        
                             
                             self.recorder.stop()
                             self.record.toggle()
-                            // updating data for every rcd...
                             self.getAudios()
                             return
                         }
                         
                         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
                         
-                        // same file name...
-                        // so were updating based on audio count...
                         let filName = url.appendingPathComponent("Memorie\(self.audios.count + 1).m4a")
                         
                         let settings = [
@@ -104,23 +92,16 @@ struct MemoriesView : View {
             
             do{
                 
-                // Intializing...
-                
                 self.session = AVAudioSession.sharedInstance()
                 try self.session.setCategory(.playAndRecord)
-                
-                // requesting permission
-                // for this we require microphone usage description in info.plist...
+            
                 self.session.requestRecordPermission { (status) in
                     
                     if !status{
                         
-                        // error msg...
                         self.alert.toggle()
                     }
                     else{
-                        
-                        // if permission granted means fetching all data...
                         
                         self.getAudios()
                     }
@@ -141,11 +122,8 @@ struct MemoriesView : View {
             
             let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             
-            // fetch all data from document directory...
-            
             let result = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .producesRelativePathURLs)
             
-            // updated means remove all old data..
             
             self.audios.removeAll()
             

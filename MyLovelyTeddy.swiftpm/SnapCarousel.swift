@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-// To for Accepting List....
+
 struct SnapCarousel<Content: View,T: Identifiable>: View {
     var content: (T) -> Content
     var list: [T]
     
-    // Properties...
     var spacing: CGFloat
     var trailingSpace: CGFloat
     @Binding var index: Int
@@ -25,18 +24,13 @@ struct SnapCarousel<Content: View,T: Identifiable>: View {
         self._index = index
         self.content = content
     }
-    
-    // Offset...
+
     @GestureState var offset: CGFloat = 0
     @State var currentIndex: Int = 0
     
     var body: some View{
         
         GeometryReader{proxy in
-            
-            // Setting correct Width for snap Carousel....
-            
-            // One Sided Snap Caorusel...
             
             let width = proxy.size.width - (trailingSpace - spacing)
             let adjustMentWidth = (trailingSpace / 2) - spacing
@@ -49,9 +43,7 @@ struct SnapCarousel<Content: View,T: Identifiable>: View {
                         .frame(width: proxy.size.width - trailingSpace)
                 }
             }
-            // Spacing will be horizontal padding...
             .padding(.horizontal,spacing)
-            // setting only after 0th index..
             .offset(x: (CGFloat(currentIndex) * -width) + (currentIndex != 0 ? adjustMentWidth : 0) + offset)
             .gesture(
             
