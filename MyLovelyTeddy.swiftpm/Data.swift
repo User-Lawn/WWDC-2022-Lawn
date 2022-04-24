@@ -15,9 +15,9 @@ struct Info {
 let information = Info(
    
     randomComments: [
-        "The beautiful thing about memories is that they are yours;\nwhether they are good, bad, or indifferent.\nThey belong to you, and no matter where you are now.\n- Unknown",
+        "Today's special moments are tomorrow's memories\n- Yonsei Univ",
         
-        "Photos capture our memories in print,\nbut our memories are always with us in our minds.\n- Catherine Pulsifer",
+        "Photos capture our memories in print, but our memories are always with us in our minds.\n- Catherine Pulsifer",
         
         "The memory of happiness tends to make misery woeful.\n- Roman Proverb",
         
@@ -25,9 +25,6 @@ let information = Info(
         
         "Our memories are the only paradise from which we can never be expelled.\n- Jean Paul Richter",
         
-        "Memories were the markers of the journey through life.\nIt was necessary to know where you had come from.\nOnly then could you know where you were going.\n - William Shatner",
-
-        "Memories, even your most precious ones, fade surprisingly quickly.\nBut I don't go along with that.\nThe memories I value most, I don't ever see them fading.\n- Kazuo Ishiguro",
         
     ]
 )
